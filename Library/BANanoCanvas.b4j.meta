@@ -4,6 +4,6 @@ ModuleBreakpoints0=
 ModuleBreakpoints1=
 ModuleClosedNodes0=
 ModuleClosedNodes1=
-NavigationStack=MashCanvas,getglobalAlpha,148,0,MashCanvas,getwidth,25,6,MashCanvas,getcanvasWidth,25,0,MashCanvas,setcanvasheight,35,0,MashCanvas,getheight,37,1,MashCanvas,getcanvasheight,37,0,MashCanvas,setcanvasWidth,22,0,MashCanvas,setdrawImage,539,0,MashCanvas,getdrawImage,545,0,MashCanvas,drawImage1,769,0,MashCanvas,measureText1,763,0
+NavigationStack=MashCanvas,getcanvasheight,37,0,MashCanvas,setcanvasWidth,22,0,MashCanvas,setdrawImage,539,0,MashCanvas,getdrawImage,545,0,MashCanvas,drawImage1,769,0,MashCanvas,measureText1,763,0,MashCanvas,createLinearGradient1,85,0,MashCanvas,createRadialGradient1,101,0,Main,Process_Globals,12,0,MashCanvas,createPattern1,91,0
 SelectedBuild=0
 VisibleModules=

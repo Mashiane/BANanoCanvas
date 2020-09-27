@@ -64,6 +64,6 @@ ModuleClosedNodes6=
 ModuleClosedNodes7=
 ModuleClosedNodes8=
 ModuleClosedNodes9=
-NavigationStack=Main,AppStart,16,0,pgCanvasDay08,Init,14,0,pgCanvasDay16,loadimage,61,6,pgCanvasDay17,loadimage,63,6,pgCanvasDay17,Init,57,6,pgCanvasDay18,Process_Globals,7,0,pgCanvasDay18,minimum,20,0,pgCanvasDay18,Init,120,6,canvdays,Process_Globals,4,0,Main,BANano_Ready,80,0
+NavigationStack=pgCanvasDay08,Init,14,0,pgCanvasDay16,loadimage,61,6,pgCanvasDay17,loadimage,63,6,pgCanvasDay17,Init,57,6,pgCanvasDay18,Process_Globals,7,0,pgCanvasDay18,minimum,20,0,pgCanvasDay18,Init,120,6,canvdays,Process_Globals,4,0,Main,AppStart,16,0,Main,BANano_Ready,66,0
 SelectedBuild=0
 VisibleModules=17,18

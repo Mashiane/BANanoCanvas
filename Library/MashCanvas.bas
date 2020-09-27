@@ -85,8 +85,8 @@ End Sub
 
 
 'createLinearGradient
-Sub createLinearGradient1(x0 As Int, y0 As Int, x1 As Int, y1 As Int) As MashCanvas
-	Dim bo As BANanoObject = Context.RunMethod("createLinearGradient", Array(x0, x1, y0, y1))
+Sub createLinearGradient1(x As Int, y As Int, x1 As Int ,y1 As Int) As MashCanvas
+	Dim bo As BANanoObject = Context.RunMethod("createLinearGradient", Array(x, y, x1, y1))
 	Dim jse As MashCanvas
 	jse.Context = bo
 	jse.data = bo.GetField("data").result
@@ -104,8 +104,8 @@ Sub createPattern1(jse As BANanoElement, direction As String) As MashCanvas
 End Sub
 
 'createRadialGradient
-Sub createRadialGradient1(x0 As Int, y0 As Int, r0 As Int, x1 As Int, y1 As Int, r1 As Int) As MashCanvas
-	Dim bo As BANanoObject = Context.RunMethod("createRadialGradient", Array(x0,y0,r0,x1,y1,r1))
+Sub createRadialGradient1(x As Int, y As Int , r As Int, x1 As Int, y1 As Int , r1 As Int) As MashCanvas
+	Dim bo As BANanoObject = Context.RunMethod("createRadialGradient", Array(x,y,r,x1,y1,r1))
 	Dim el As MashCanvas
 	el.Context = bo
 	el.data = bo.GetField("data").result
