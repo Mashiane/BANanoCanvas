@@ -22,6 +22,30 @@ Public Sub Initialize(jse As BANanoElement, sContext As String) As MashCanvas
 	Return Me
 End Sub
 
+'set width
+Sub setcanvasWidth(value As String) As MashCanvas
+	Canvas.SetAttr("width", value)
+	Return Me
+End Sub
+
+'get width
+Sub getcanvasWidth() As String
+	Dim w As String = Canvas.GetAttr("width")
+	Return w
+End Sub
+
+'set height
+Sub setcanvasHeight(value As String) As MashCanvas
+	Canvas.SetAttr("height", value)
+	Return Me
+End Sub
+
+'get height
+Sub getcanvasHeight() As String
+	Dim w As String = Canvas.GetAttr("height")
+	Return w
+End Sub
+
 'get pixel color
 Sub getPixelColor(pos As Int) As Pixel
 	Dim red As Int
@@ -58,6 +82,42 @@ Sub setPixelColor(pos As Int, red As Int, green As Int, blue As Int, alpha As In
 	data.Set(pos + 3, alpha)
 	Return Me
 End Sub
+
+
+'createLinearGradient
+Sub createLinearGradient1(x0 As Int, y0 As Int, x1 As Int, y1 As Int) As MashCanvas
+	Dim bo As BANanoObject = Context.RunMethod("createLinearGradient", Array(x0, x1, y0, y1))
+	Dim jse As MashCanvas
+	jse.Context = bo
+	jse.data = bo.GetField("data").result
+	Return jse
+End Sub
+
+'createPattern
+Sub createPattern1(jse As BANanoElement, direction As String) As MashCanvas
+	Dim bo As BANanoObject = jse.ToObject
+	Dim bo1 As BANanoObject = Context.RunMethod("createPattern", Array(bo, direction))
+	Dim jsc As MashCanvas
+	jsc.Context = bo1
+	jsc.data = bo1.GetField("data").result
+	Return jsc
+End Sub
+
+'createRadialGradient
+Sub createRadialGradient1(x0 As Int, y0 As Int, r0 As Int, x1 As Int, y1 As Int, r1 As Int) As MashCanvas
+	Dim bo As BANanoObject = Context.RunMethod("createRadialGradient", Array(x0,y0,r0,x1,y1,r1))
+	Dim el As MashCanvas
+	el.Context = bo
+	el.data = bo.GetField("data").result
+	Return el
+End Sub
+
+'addColorStop
+Sub addColorStop1(stopx As Double, colorx As String) As MashCanvas
+	Context.RunMethod("addColorStop", Array(stopx, colorx))
+	Return Me
+End Sub
+
 
 'set pixels color
 Sub setPixelColor1(pos As Int, pxl As Pixel) As MashCanvas
@@ -546,33 +606,6 @@ End Sub
 'get toDataURL
 Sub gettoDataURL() As Object
 	Return Context.GetField("toDataURL").Result
-End Sub
-
-'createLinearGradient
-Sub createLinearGradient1(x0 As Int, y0 As Int, x1 As Int, y1 As Int) As MashCanvas
-	Dim bo As BANanoObject = Context.RunMethod("createLinearGradient", Array(x0, x1, y0, y1))
-	Dim jse As MashCanvas
-	jse.Context = bo
-	jse.data = bo.GetField("data").result
-	Return jse
-End Sub
-
-'createPattern
-Sub createPattern1(bo As BANanoObject, direction As String) As BANanoObject
-	Dim bo1 As BANanoObject = Context.RunMethod("createPattern", Array(bo, direction))
-	Return bo1
-End Sub
-
-'createRadialGradient
-Sub createRadialGradient1(x0 As Int, y0 As Int, r0 As Int, x1 As Int, y1 As Int, r1 As Int) As BANanoObject
-	Dim bo As BANanoObject = Context.RunMethod("createRadialGradient", Array(x0,y0,r0,x1,y1,r1))
-	Return bo
-End Sub
-
-'addColorStop
-Sub addColorStop1(stopx As Double, colorx As String) As MashCanvas
-	Context.RunMethod("addColorStop", Array(stopx, colorx))
-	Return Me
 End Sub
 
 'rect
